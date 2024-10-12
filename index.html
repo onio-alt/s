@@ -9,12 +9,13 @@
     <meta name="keywords" content="судебная экспертиза, компьютерно-техническая экспертиза, IT экспертиза, кибербезопасность, компьютерные исследования, анализ данных">
     <link rel="stylesheet" href="styles.css"> <!-- Подключение файла стилей для космического фона -->
     <style>
-        body {
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
             font-family: 'Arial', sans-serif;
             color: #ffffff;
-            margin: 0;
-            padding: 0;
-            display: flex;
         }
 
         .sidebar {
@@ -60,6 +61,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             border-radius: 8px;
             width: calc(100% - 290px); /* Учитываем ширину меню */
+            flex: 1; /* Заставляем контейнер занимать оставшееся пространство */
         }
 
         h1 {
