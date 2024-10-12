@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стоимость услуг - Компьютерно-техническая экспертиза</title>
+    <meta name="description" content="Стоимость услуг компьютерно-технической экспертизы">
+    <meta name="keywords" content="стоимость, компьютерно-техническая экспертиза, услуги экспертизы">
+    <link rel="stylesheet" href="styles.css"> <!-- Подключение файла стилей для космического фона -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .sidebar {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            overflow-y: auto;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            padding: 10px;
+            background: #1C1C1C;
+            margin-bottom: 5px;
+            color: #87CEEB;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .sidebar ul li a {
+            color: #87CEEB;
+            text-decoration: none;
+        }
+
+        .sidebar ul li:hover {
+            background: #87CEEB;
+            color: #000;
+        }
+
+        .container {
+            margin-left: 270px; /* Отступ от левого края для основного контента */
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            width: calc(100% - 290px); /* Учитываем ширину меню */
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #87CEEB;
+            border-bottom: 2px solid #87CEEB;
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 30px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 200px;
+            }
+
+            .container {
+                margin-left: 220px;
+                width: calc(100% - 240px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sidebar {
+                width: 180px;
+            }
+
+            .container {
+                margin-left: 200px;
+                width: calc(100% - 220px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="stars"></div>
+    <div class="glowing"></div>
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="index.html">Главная</a></li> <!-- Ссылка на главную страницу -->
+            <li><a href="#">Аппаратно-компьютерная экспертиза</a></li>
+            <li><a href="#">Программно-компьютерная экспертиза</a></li>
+            <li><a href="#">Компьютерно-сетевая экспертиза</a></li>
+            <li><a href="#">Информационно-компьютерная экспертиза</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="stoimost.html">Стоимость услуг</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Стоимость услуг</h1>
+        </header>
+
+        <p>Стоимость услуг компьютерно-технической экспертизы начинается от 8000 рублей. В зависимости от вида экспертизы, цены могут варьироваться:</p>
+        <ul>
+            <li><strong>Аппаратно-компьютерная экспертиза:</strong> от 8000 рублей</li>
+            <li><strong>Программно-компьютерная экспертиза:</strong> от 8000 рублей</li>
+            <li><strong>Компьютерно-сетевая экспертиза:</strong> от 8000 рублей</li>
+            <li><strong>Информационно-компьютерная экспертиза:</strong> от 8000 рублей</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Компьютерно-техническая экспертиза. Все права защищены.</p>
+    </footer>
+</body>
+
+</html>
