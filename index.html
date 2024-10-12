@@ -4,44 +4,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Экспертиза в IT - Консультации и решения</title>
-    <meta name="description" content="Мы предоставляем услуги экспертного анализа и консультаций в области IT.">
-    <meta name="keywords" content="IT экспертиза, кибербезопасность, веб-разработка, аналитика данных, итэкспертиза, it экспертиза, ИТ экспертиза, IT экспертиза">
+    <title>Компьютерно-техническая экспертиза</title>
+    <meta name="description" content="Компьютерно-техническая экспертиза, судебная экспертиза, исследование компьютерных систем и данных">
+    <meta name="keywords" content="судебная экспертиза, компьютерно-техническая экспертиза, IT экспертиза, кибербезопасность, компьютерные исследования, анализ данных">
+    <link rel="stylesheet" href="styles.css"> <!-- Подключение файла стилей для космического фона -->
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
+            color: #ffffff;
             margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .sidebar {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            overflow-y: auto;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
             padding: 0;
         }
 
-        header {
-            background-color: #5D5C61;
-            color: white;
-            padding: 20px 0;
+        .sidebar ul li {
+            padding: 10px;
+            background: #1C1C1C;
+            margin-bottom: 5px;
+            color: #87CEEB;
+            border-radius: 5px;
             text-align: center;
+        }
+
+        .sidebar ul li a {
+            color: #87CEEB;
+            text-decoration: none;
+        }
+
+        .sidebar ul li:hover {
+            background: #87CEEB;
+            color: #000;
+        }
+
+        .container {
+            margin-left: 270px; /* Отступ от левого края для основного контента */
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            width: calc(100% - 290px); /* Учитываем ширину меню */
         }
 
         h1 {
             margin: 0;
             font-size: 2.5em;
-        }
-
-        .container {
-            width: 90%;
-            margin: 20px auto;
-            max-width: 1200px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            padding: 20px;
+            text-align: center;
         }
 
         h2 {
             font-size: 2em;
-            color: #379683;
-            border-bottom: 2px solid #379683;
+            color: #87CEEB;
+            border-bottom: 2px solid #87CEEB;
             padding-bottom: 5px;
             margin-top: 20px;
         }
@@ -57,15 +87,15 @@
         }
 
         ul li {
-            background: #8EE4AF;
+            background: #1C1C1C;
             margin: 5px 0;
             padding: 10px;
             border-radius: 5px;
-            color: #05386B;
+            color: #87CEEB;
         }
 
         footer {
-            background-color: #379683;
+            background-color: rgba(0, 0, 0, 0.7);
             color: white;
             text-align: center;
             padding: 10px 0;
@@ -73,83 +103,76 @@
             font-size: 0.9em;
         }
 
-        .expertise-section {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .expertise-card {
-            flex: 0 0 48%;
-            background-color: #edf5e1;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin-bottom: 20px;
-            transition: transform 0.2s;
-        }
-
-        .expertise-card:hover {
-            transform: translateY(-5px);
-        }
-
         @media (max-width: 768px) {
-            .expertise-card {
-                flex: 0 0 100%;
+            .sidebar {
+                width: 200px;
+            }
+
+            .container {
+                margin-left: 220px;
+                width: calc(100% - 240px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sidebar {
+                width: 180px;
+            }
+
+            .container {
+                margin-left: 200px;
+                width: calc(100% - 220px);
             }
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>Экспертиза в IT</h1>
-    </header>
+    <div class="stars"></div>
+    <div class="glowing"></div>
 
-    <div class="container">
-        <h2>ООоо нас</h2>
-        <p>
-            Мы предоставляем услуги экспертного анализа и консультаций в области IT. Наша команда экспертов помогает
-            предприятиям адаптироваться к цифровым изменениям, улучшать производственные процессы и внедрять передовые
-            технологии.
-        </p>
-
-        <h2>Направления экспертизы</h2>
-        <div class="expertise-section">
-            <div class="expertise-card">
-                <h3>Кибербезопасность</h3>
-                <p>Мы проводим оценку систем безопасности, тестирование на проникновение и разрабатываем стратегии защиты
-                    данных от киберугроз.</p>
-            </div>
-            <div class="expertise-card">
-                <h3>Веб-разработка</h3>
-                <p>Наши специалисты разрабатывают эффективные веб-приложения, используя новейшие технологии и лучшие
-                    практики в области UX/UI.</p>
-            </div>
-            <div class="expertise-card">
-                <h3>Аналитика данных</h3>
-                <p>Мы помогаем компаниям извлекать полезную информацию из данных, применяя современные методы
-                    машинного обучения и Big Data.</p>
-            </div>
-            <div class="expertise-card">
-                <h3>Системная интеграция</h3>
-                <p>Наши эксперты интегрируют различные программные и аппаратные решения для создания единой,
-                    эффективной ИТ-инфраструктуры.</p>
-            </div>
-        </div>
-
-        <h2>Наши услуги</h2>
+    <div class="sidebar">
         <ul>
-            <li>Аудит ИТ-инфраструктуры</li>
-            <li>Консультации по облачным решениям</li>
-            <li>Автоматизация бизнес-процессов</li>
-            <li>Обеспечение сетевой безопасности</li>
-            <li>Разработка мобильных приложений</li>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Аппаратно-компьютерная экспертиза</a></li>
+            <li><a href="#">Программно-компьютерная экспертиза</a></li>
+            <li><a href="#">Компьютерно-сетевая экспертиза</a></li>
+            <li><a href="#">Информационно-компьютерная экспертиза</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="stoimost.html">Стоимость услуг</a></li> <!-- Добавленная ссылка на страницу стоимости -->
         </ul>
     </div>
 
+    <div class="container">
+        <header>
+            <h1>Компьютерно-техническая экспертиза</h1>
+        </header>
+
+        <h2>Компьютерно-техническая экспертиза</h2>
+        <p>
+            Компьютерно-техническая экспертиза представляет собой исследование, проводимое в целях определения статуса компьютерного средства, выявления и получения информации с компьютерного средства, получения доступа к информации, содержащейся на компьютерном носителе. Компьютерно-техническая экспертиза является отдельным родом судебных экспертиз и относится к классу инженерно-технических экспертиз.
+        </p>
+
+        <h2>Виды компьютерно-технических экспертиз</h2>
+        <ul>
+            <li><strong>Аппаратно-компьютерная экспертиза</strong><br>
+                Исследование компьютерных систем и их компонентов на предмет работоспособности и соответствия стандартам.</li>
+            <li><strong>Программно-компьютерная экспертиза</strong><br>
+                Оценка программного обеспечения, выявление его свойств и анализ исходных кодов для выявления нарушений.</li>
+            <li><strong>Компьютерно-сетевая экспертиза</strong><br>
+                Анализ сетевого взаимодействия, оценка безопасности сетевых устройств и исследование следов сетевых атак.</li>
+            <li><strong>Информационно-компьютерная экспертиза</strong><br>
+                Изучение информационных объектов: текстовых, аудио, видео документов и баз данных, созданных с использованием компьютерных систем.</li>
+        </ul>
+
+        <h2>Контактные данные</h2>
+        <p>Телеграмм: Expert IT</p>
+        <p>Почта: expertiza_it@mail.ru</p>
+        <p>Телефон: +7 926 610 09 03</p>
+    </div>
+
     <footer>
-        <p>&copy; 2024 Экспертиза в IT. Все права защищены.</p>
+        <p>&copy; 2024 Компьютерно-техническая экспертиза. Все права защищены.</p>
     </footer>
 </body>
 
