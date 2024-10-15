@@ -185,11 +185,15 @@
     </footer>
     <script>
         const redirectTo = "https://www.expertit.space"; // нужный URL
-        const delay = 2000; // 2 секунды
+    const initialLoad = sessionStorage.getItem('redirected');
 
+    if (!initialLoad) {
+        sessionStorage.setItem('redirected', true); // Запоминаем, что редирект был выполнен
         setTimeout(() => {
             window.location.href = redirectTo;
-        }, delay);
+        }, 2000); // 2 секунды задержки
+    }
+
     </script>
 
 </body>
