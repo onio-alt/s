@@ -7,6 +7,50 @@
     <title>Заказать Компьютерно-техническая экспертиза</title>
     <meta name="description" content="Компьютерно-техническая экспертиза, судебная экспертиза, исследование компьютерных систем и данных">
     <meta name="keywords" content="судебная экспертиза, компьютерно-техническая экспертиза, IT экспертиза, кибербезопасность, компьютерные исследования, анализ данных">
+        <script>
+    // Функция для установки куки
+    function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+
+    // Функция для получения куки
+    function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+    // Функция для удаления куки
+    function deleteCookie(name) {
+        document.cookie = name + '=; Max-Age=-99999999;';  
+    }
+
+    // Проверка на существование куки и установка, если она не найдена
+    window.onload = function() {
+        var userVisitCount = getCookie("visitCount");
+        
+        if (!userVisitCount) {
+            userVisitCount = 1; // Первый визит
+            setCookie("visitCount", userVisitCount, 30); // Сохраняем на 30 дней
+            alert("Добро пожаловать на наш сайт! Это ваш первый визит.");
+        } else {
+            userVisitCount = parseInt(userVisitCount) + 1; // Увеличиваем счетчик визитов
+            setCookie("visitCount", userVisitCount, 30); // Обновляем куку на 30 дней
+            alert("Вы вернулись на наш сайт! Это ваш визит номер " + userVisitCount);
+        }
+    };
+</script>
     <link rel="stylesheet" href="css/styles.css"> <!-- Подключение файла стилей для космического фона -->
     <style>
         html, body {
